@@ -40,7 +40,7 @@ async function init()
     while(true)
     {
         await loopAmm();
-        await sleep(3000)
+        await sleep(10000)
     }
 }
 
