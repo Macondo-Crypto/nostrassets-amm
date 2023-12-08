@@ -25,13 +25,13 @@ async function loop_TREAT()
     var sellTo = r?.data?.nostr_market_order[0]
     // console.log(sellTo)
 
-    // var subPriceAlam = buyFrom.price * 0.01 // make amm when 1% price change
-    var subPriceAlam = buyFrom.price * 0
+    var subPriceAlam = buyFrom.price * 0.008 // make amm when 1% price change
+    // var subPriceAlam = buyFrom.price * 0
     if(sellTo.price-buyFrom.price > subPriceAlam)
     {
         console.log(`🚀 New TREAT price amm for ${sellTo.price-buyFrom.price}:: `,buyFrom,sellTo)
     }else{
-        console.log(i)
+        // console.log(i)
         i++
     }
 }
@@ -46,13 +46,13 @@ async function loop_TRICK()
     var r = await api.nostrassetsGraph("TRICK","BUY","desc");
     var sellTo = r?.data?.nostr_market_order[0]
     // console.log(sellTo)
-    // var subPriceAlam = buyFrom.price * 0.01 // make amm when 1% price change
-    var subPriceAlam = buyFrom.price * 0
+    var subPriceAlam = buyFrom.price * 0.008 // make amm when 1% price change
+    // var subPriceAlam = buyFrom.price * 0
     if(sellTo.price-buyFrom.price > subPriceAlam)
     {
         console.log(`🚀 New TRICK price amm for ${sellTo.price-buyFrom.price}:: `,buyFrom,sellTo)
     }else{
-        console.log(i)
+        // console.log(i)
         i++
     }
 }
